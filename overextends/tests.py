@@ -79,7 +79,7 @@ class Tests(TestCase):
                 "super_string": "",
             }
             if extends:
-                extends_string = "{%% overextends \"%s\" %%}" % self.unique_id
+                extends_string = "{%% extends \"%s\" %%}" % self.unique_id
                 template_vars["extends_string"] = extends_string
                 template_vars["super_string"] = "{{ block.super }}"
             f.write((TEST_TEMPLATE % template_vars).strip())
